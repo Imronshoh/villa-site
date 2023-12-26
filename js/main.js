@@ -1,5 +1,6 @@
 let partMovies = movies.slice(90, 120);
 let elMovList = document.querySelector(".movies__list");
+let elInp = document.querySelector(".inp");
 
 partMovies.forEach((item) => {
   console.log(item);
@@ -32,3 +33,7 @@ partMovies.forEach((item) => {
             `;
   elMovList.appendChild(newLi);
 });
+
+function fn() {
+  elInp.value = "";
+}
