@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Thin", sans-serif;
+  font-family: "Roboto Light", sans-serif;
+  font-family: "Roboto Medium", sans-serif;
+  font-family: "Roboto Black", sans-serif;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+header {
+  background: #0c111b;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav__list {
+  margin-right: 19px;
+  margin-top: 10px;
+}
+header .nav__list select {
+  margin-left: 34px;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+}
+header .nav__list select option {
+  color: black;
+  outline: none;
+}
+header form {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+header form input {
+  width: 261px;
+  height: 18px;
+  flex-shrink: 0;
+  color: white;
+  padding-left: 5px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1.5px solid white;
+}
+header form button {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+.hero {
+  height: 600px !important;
+  overflow: hidden;
+}
+
+.movies {
+  background: #0c111b;
+}
+
+.movies__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.movies__list li {
+  background: #0c111b;
+  margin-top: 20px;
+}
+.movies__list li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.movies__list li .card-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.movies__list li .card_year {
+  color: var(--gray-400, #9ca3af);
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.movies__list li .card_category {
+  color: var(--gray-400, #9ca3af);
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.movies__list li .card_rating {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.movies__list li .card_rating i {
+  background: linear-gradient(to bottom, #ffd700 0%, #ffe23d 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.movies__list li .button-29 {
+  align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+.movies__list li .button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+.movies__list li .button-29:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+.movies__list li .button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+footer {
+  margin-top: -20px;
+  padding: 50px 507px;
+  background: #0c111b;
+}
+footer .soc {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 36px;
+  list-style-type: none;
+}
+footer ul li {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+footer p {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 37px;
+}/*# sourceMappingURL=main.css.map */

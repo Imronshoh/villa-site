@@ -1,0 +1,49 @@
+header {
+  background: #0c111b;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__list {
+    margin-right: 19px;
+    margin-top: 10px;
+    select {
+      margin-left: 34px;
+      color: #fff;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      background-color: transparent;
+      outline: none;
+      cursor: pointer;
+      border: 0;
+      option {
+        color: black;
+        outline: none;
+      }
+    }
+  }
+  form {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    input {
+      width: 261px;
+      height: 18px;
+      flex-shrink: 0;
+      color: white;
+      padding-left: 5px;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      border-bottom: 1.5px solid white;
+    }
+    button {
+      border: none;
+      background-color: transparent;
+      color: white;
+    }
+  }
+}
