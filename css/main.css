@@ -103,6 +103,11 @@ header form button {
 .movies__list li img {
   -o-object-fit: cover;
      object-fit: cover;
+  cursor: pointer;
+}
+.movies__list li img:hover {
+  transform: translateY(-5px);
+  transition: 0.2s ease all;
 }
 .movies__list li .card-title {
   color: #fff;
