@@ -23,23 +23,18 @@
         <nav class="nav">
           <img src="./img/Logo.svg" alt="" style="cursor: pointer" />
           <ul class="nav__list">
-            <select>
+            <select onchange="fnYear(value)">
               <option value="" hidden>Year</option>
-              <option value="">2021</option>
-              <option value="">2022</option>
-              <option value="">2023</option>
+              <option value="new">New</option>
+              <option value="old">Old</option>
             </select>
-            <select>
+            <select onchange="fnRating(value)">
               <option value="" hidden>Rating</option>
-              <option value="">10.0</option>
-              <option value="">9.0</option>
-              <option value="">8.0</option>
+              <option value="max">Max</option>
+              <option value="min">Min</option>
             </select>
-            <select>
+            <select onchange="fnCategory(value)" class="sel__category">
               <option value="" hidden>Category</option>
-              <option value="">Action</option>
-              <option value="">Fantasy</option>
-              <option value="">Adventure</option>
             </select>
           </ul>
           <form action="#">

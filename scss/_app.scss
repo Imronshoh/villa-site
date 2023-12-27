@@ -8,7 +8,7 @@
 .movies__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   li {
     background: #0c111b;
     margin-top: 20px;

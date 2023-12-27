@@ -1,11 +1,15 @@
 let partMovies = movies.slice(90, 120);
 let elMovList = document.querySelector(".movies__list");
 let elInp = document.querySelector(".inp");
+let elSelCat = document.querySelector(".sel__category");
 
-partMovies.forEach((item) => {
-  console.log(item);
-  let newLi = document.createElement("li");
-  newLi.innerHTML = `  
+fnRender(partMovies);
+
+function fnRender(data) {
+  elMovList.innerHTML = "";
+  data.forEach((item) => {
+    let newLi = document.createElement("li");
+    newLi.innerHTML = `  
             <li>
                 <div class="" style="width: 18rem">
                   <img
@@ -31,9 +35,40 @@ partMovies.forEach((item) => {
                 </div>
             </li>
             `;
-  elMovList.appendChild(newLi);
-});
+    elMovList.appendChild(newLi);
+  });
+}
 
 function fn() {
   elInp.value = "";
+}
+function fnYear(value) {
+  if (value == "new") {
+    fnRender(partMovies.sort((a, b) => b.movie_year - a.movie_year));
+  } else if (value == "old") {
+    fnRender(partMovies.sort((a, b) => a.movie_year - b.movie_year));
+  }
+}
+function fnRating(value) {
+  if (value == "max") {
+    fnRender(partMovies.sort((a, b) => b.imdb_rating - a.imdb_rating));
+  } else if (value == "min") {
+    fnRender(partMovies.sort((a, b) => a.imdb_rating - b.imdb_rating));
+  }
+}
+
+let arrCategory = [];
+partMovies.forEach((item) => {
+  if (!arrCategory.includes(item.Categories)) {
+    arrCategory.push(item.Categories);
+  }
+});
+arrCategory.forEach((item) => {
+  let newOption = document.createElement("option");
+  newOption.textContent = item;
+  elSelCat.appendChild(newOption);
+});
+
+function fnCategory(value) {
+  fnRender(partMovies.filter((item) => item.Categories == value));
 }
