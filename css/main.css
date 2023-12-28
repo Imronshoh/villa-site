@@ -103,6 +103,7 @@ header form button {
 .movies__list li img {
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 5px;
   cursor: pointer;
 }
 .movies__list li img:hover {
@@ -192,6 +193,7 @@ footer {
 footer .soc {
   display: flex;
   justify-content: center;
+  gap: 40px;
   cursor: pointer;
 }
 footer ul {
