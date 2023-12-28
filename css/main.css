@@ -40,9 +40,6 @@ header nav {
   justify-content: space-between;
   align-items: center;
 }
-header nav .offcanvas-body {
-  text-align: center;
-}
 header nav .offcanvas-body li {
   padding: 40px 0;
   cursor: pointer;
