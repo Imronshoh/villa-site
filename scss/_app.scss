@@ -43,9 +43,14 @@
       font-size: 18px;
       font-weight: 700;
       i {
-        background: -moz-linear-gradient(top, #ffd700 0%, #ffe23d 100%);
-        background: -webkit-linear-gradient(top, #ffd700 0%, #ffe23d 100%);
-        background: linear-gradient(to bottom, #ffd700 0%, #ffe23d 100%);
+        background-color: #ff3cac;
+        background-image: linear-gradient(
+          225deg,
+          #ff3cac 0%,
+          #784ba0 50%,
+          #2b86c5 100%
+        );
+
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;

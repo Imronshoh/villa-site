@@ -162,7 +162,8 @@ header form button {
   font-weight: 700;
 }
 .movies__list li .card_rating i {
-  background: linear-gradient(to bottom, #ffd700 0%, #ffe23d 100%);
+  background-color: #ff3cac;
+  background-image: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
