@@ -40,6 +40,27 @@ header nav {
   justify-content: space-between;
   align-items: center;
 }
+header nav .offcanvas-body {
+  text-align: center;
+}
+header nav .offcanvas-body li {
+  padding: 40px 0;
+  cursor: pointer;
+  color: black;
+  text-align: center;
+}
+header nav .offcanvas-body li a {
+  cursor: pointer;
+  color: #000;
+}
+header nav .offcanvas-body li:hover {
+  background-color: green;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+header nav .offcanvas-body li:hover a {
+  color: white;
+}
 header .nav__list {
   margin-right: 19px;
   margin-top: 10px;

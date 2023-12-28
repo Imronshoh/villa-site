@@ -4,6 +4,28 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .offcanvas-body {
+      text-align: center;
+      li {
+        padding: 40px 0;
+        cursor: pointer;
+        color: black;
+        text-align: center;
+      }
+      li a {
+        cursor: pointer;
+        color: #000;
+      }
+
+      li:hover {
+        background-color: green;
+        opacity: 0.8;
+        transition: 0.5s ease;
+      }
+      li:hover a {
+        color: white;
+      }
+    }
   }
   .nav__list {
     margin-right: 19px;
