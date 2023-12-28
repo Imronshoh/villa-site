@@ -23,17 +23,33 @@
         <nav class="nav">
           <img src="./img/Logo.svg" alt="" style="cursor: pointer" />
           <ul class="nav__list">
-            <select onchange="fnYear(value)">
+            <select onchange="fnYear(value)" class="minimal">
               <option value="" hidden>Year</option>
               <option value="new">New</option>
               <option value="old">Old</option>
             </select>
-            <select onchange="fnRating(value)">
+            <select onchange="fnRating(value)" class="minimal">
               <option value="" hidden>Rating</option>
               <option value="max">Max</option>
               <option value="min">Min</option>
             </select>
-            <select onchange="fnCategory(value)" class="sel__category">
+            <select
+              onchange="fnCategory(value)"
+              class="sel__category"
+              style="
+                background-image: linear-gradient(
+                    45deg,
+                    transparent 50%,
+                    gray 50%
+                  ),
+                  linear-gradient(135deg, gray 50%, transparent 50%),
+                  linear-gradient(to right, #ccc, #ccc);
+                background-position: calc(100% - 20px) calc(1em + 2px),
+                  calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+                background-size: 5px 5px, 5px 5px, 1px 1.5em;
+                background-repeat: no-repeat;
+              "
+            >
               <option value="" hidden>Category</option>
             </select>
           </ul>
