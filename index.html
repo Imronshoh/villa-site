@@ -40,14 +40,32 @@
             </div>
             <div class="offcanvas-body">
               <div>
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <hr />
-                  <li><a href="#">Profile</a></li>
-                  <hr />
-                  <li><a href="#">Contact</a></li>
-                  <hr />
-                  <li><a href="#">Work with</a></li>
+                <ul class="nav__list" style="color: black">
+                  <select
+                    style="background-color: black"
+                    onchange="fnYear(value)"
+                    class="minimal"
+                  >
+                    <option value="" hidden style="color: white">Year</option>
+                    <option value="new" style="color: white">New</option>
+                    <option value="old" style="color: white">Old</option>
+                  </select>
+                  <select
+                    onchange="fnRating(value)"
+                    class="minimal"
+                    style="background-color: black"
+                  >
+                    <option value="" hidden style="color: white">Rating</option>
+                    <option value="max" style="color: white">Max</option>
+                    <option value="min" style="color: white">Min</option>
+                  </select>
+                  <select
+                    onchange="fnCategory(value)"
+                    class="sel__category"
+                    style="border: 1px solid #000; color: #000"
+                  >
+                    <option value="" hidden>Category</option>
+                  </select>
                 </ul>
               </div>
               <div class="dropdown mt-3">
@@ -107,13 +125,14 @@
               <option value="" hidden>Category</option>
             </select>
           </ul>
-          <form action="#">
-            <input type="text" placeholder="Search" class="inp" />
-            <button onclick="fn()"><i class="bi bi-search"></i></button>
+          <form onsubmit="fnSearch(event)" action="#" class="nav__form">
+            <input type="text" placeholder="Search" name="search" />
+            <button type="submit"><i class="bi bi-search"></i></button>
           </form>
         </nav>
       </div>
     </header>
+    <div class="pagenation text-center"></div>
     <section class="hero">
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">

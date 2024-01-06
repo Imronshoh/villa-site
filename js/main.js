@@ -1,6 +1,5 @@
 let partMovies = movies.slice(90, 120);
 let elMovList = document.querySelector(".movies__list");
-let elInp = document.querySelector(".inp");
 let elSelCat = document.querySelector(".sel__category");
 
 fnRender(partMovies);
@@ -39,9 +38,6 @@ function fnRender(data) {
   });
 }
 
-function fn() {
-  elInp.value = "";
-}
 function fnYear(value) {
   if (value == "new") {
     fnRender(partMovies.sort((a, b) => b.movie_year - a.movie_year));
@@ -71,4 +67,29 @@ arrCategory.forEach((item) => {
 
 function fnCategory(value) {
   fnRender(partMovies.filter((item) => item.Categories == value));
+}
+
+function fnSearch(event) {
+  event.preventDefault();
+  let val = event.target.search.value;
+  fnRender(
+    partMovies.filter((item) =>
+      item.Title.toString().toLowerCase().includes(val.toLowerCase())
+    )
+  );
+}
+function fnReset(value) {
+  if (value == "") fnRender(partMovies);
+}
+function fnPagenation(count) {
+  fnRender(partMovies.slice((count - 1) * 10, count * 10));
+}
+let elPagenation = document.querySelector(".pagenation");
+for (let i = 0; i < partMovies.length / 10; i++) {
+  console.log(i);
+  let newButton = document.createElement("button");
+  newButton.textContent = i + 1;
+  newButton.classList = "btn btn-primary ms-3 text-decoration-none";
+  newButton.setAttribute("onclick", `fnPagenation(${i + 1})`);
+  elPagenation.appendChild(newButton);
 }
