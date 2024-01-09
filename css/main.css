@@ -263,4 +263,9 @@ footer p {
   font-size: 18px;
   font-weight: 700;
   margin-top: 37px;
+}
+
+.page {
+  background-color: transparent;
+  opacity: 0.8;
 }/*# sourceMappingURL=main.css.map */

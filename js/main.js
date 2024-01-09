@@ -1,6 +1,6 @@
 let partMovies = movies.slice(90, 120);
 let elMovList = document.querySelector(".movies__list");
-let elSelCat = document.querySelector(".sel__category");
+let elSelCat = document.querySelector(".sell__category");
 
 fnRender(partMovies);
 
@@ -52,13 +52,13 @@ function fnRating(value) {
     fnRender(partMovies.sort((a, b) => a.imdb_rating - b.imdb_rating));
   }
 }
-
 let arrCategory = [];
 partMovies.forEach((item) => {
   if (!arrCategory.includes(item.Categories)) {
     arrCategory.push(item.Categories);
   }
 });
+
 arrCategory.forEach((item) => {
   let newOption = document.createElement("option");
   newOption.textContent = item;
