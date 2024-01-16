@@ -3,7 +3,6 @@ let elMovList = document.querySelector(".movies__list");
 let elSelCat = document.querySelector(".sell__category");
 
 fnRender(partMovies);
-
 function fnRender(data) {
   elMovList.innerHTML = "";
   data.forEach((item) => {
@@ -12,7 +11,9 @@ function fnRender(data) {
             <li>
                 <div class="" style="width: 18rem">
                   <img
-                    src="https://i.ytimg.com/vi/${item.ytid}/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLDw0tpxVIqNxysFkl1zcZmOB-UtaA"
+                    src="https://i.ytimg.com/vi/${
+                      item.ytid
+                    }/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLDw0tpxVIqNxysFkl1zcZmOB-UtaA"
                     class="card-img-top"
                     alt="./img/Property 1=movie 1.png"
                   />
@@ -27,7 +28,15 @@ function fnRender(data) {
                     <p class="card_rating">
                      ${item.imdb_rating} <i class="bi bi-star-fill"></i>
                     </p>
-                    <a href="https://www.youtube.com/watch?v=${item.ytid}" target="_blank"><button class="button-29" role="button">Watch Movie</button></a>
+                    <div class="d-flex justify-content-between align-items-center"><a href="https://www.youtube.com/watch?v=${
+                      item.ytid
+                    }" target="_blank"><button class="button-29" role="button">Watch Movie</button></a><i style="color:white;" onclick="setFavourite('${
+      item.ytid
+    }')" class="${
+      JSON.parse(window.localStorage.getItem("saveData"))?.includes(item.ytid)
+        ? "bi bi-save2-fill"
+        : "bi bi-save2"
+    }"></i></div>
 
 
                   </div>
@@ -92,4 +101,21 @@ for (let i = 0; i < partMovies.length / 10; i++) {
   newButton.classList = "btn btn-primary ms-3 text-decoration-none";
   newButton.setAttribute("onclick", `fnPagenation(${i + 1})`);
   elPagenation.appendChild(newButton);
+}
+
+let saveData = [];
+function setFavourite(id) {
+  if (window.localStorage.getItem("saveData")) {
+    saveData = JSON.parse(window.localStorage.getItem("saveData"));
+  }
+  if (saveData.includes(id)) {
+    window.localStorage.setItem(
+      "saveData",
+      JSON.stringify(saveData.filter((item) => item != id))
+    );
+  } else {
+    saveData.push(id);
+    window.localStorage.setItem("saveData", JSON.stringify(saveData));
+  }
+  fnRender(partMovies);
 }

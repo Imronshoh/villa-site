@@ -66,6 +66,7 @@
                   >
                     <option value="" hidden>Category</option>
                   </select>
+                  <li class="nav__item"></li>
                 </ul>
               </div>
               <div class="dropdown mt-3">
@@ -124,15 +125,47 @@
             >
               <option value="" hidden>Category</option>
             </select>
+            <li class="nav__item"></li>
+            <button
+              onclick="fnMapLoc()"
+              class="btn btn-primary"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
+            >
+              Favourites
+            </button>
           </ul>
           <form onsubmit="fnSearch(event)" action="#" class="nav__form">
             <input type="text" placeholder="Search" name="search" />
             <button type="submit"><i class="bi bi-search"></i></button>
           </form>
         </nav>
+
         <div class="pagenation text-center" style="padding-bottom: 30px"></div>
       </div>
     </header>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          Offcanvas right
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body"><ul class="offcanvas-body__list"></ul></div>
+    </div>
     <section class="hero">
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
